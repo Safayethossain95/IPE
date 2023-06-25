@@ -1,0 +1,24 @@
+@mixin myfont($font_size,$weight,$family){
+    font-size: $font_size;
+    font-weight: $weight;
+    font-family: $family;
+}
+
+@mixin media($size) {
+    @if $size == xsmDevice {
+      @media (min-width: 320px) and (max-width: 575px) { @content; }
+    } @else if $size == smDevice{
+      @media (min-width: 576px) and (max-width: 767px) { @content; }
+    }
+     @else if $size == mdDevice {
+      @media (min-width: 768px) and (max-width:991px) { @content; }
+    } @else if $size == lgDevice {
+      @media (min-width: 992px) and (max-width:1199px) { @content; }
+    } @else if $size == xlgDevice  {
+      @media (min-width: 1200px) and (max-width:1399px) { @content; }
+    }
+    @else if $size == xxlgDevice {
+      @media (min-width: 1400px)  { @content; }
+    
+  }
+}

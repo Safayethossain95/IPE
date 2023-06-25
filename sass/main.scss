@@ -1,0 +1,89 @@
+@import './partials/common';
+@import './partials/mixins';
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/Satoshi-Regular.ttf);
+  }
+@font-face {
+    font-family: mainFontBlack;
+    src: url(../fonts/Satoshi-Black.ttf);
+  }
+
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: #006FDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3{
+        @include myfont(20px,700,mainFont);
+        color:#F0F4FF;
+    }
+}
+.navbar{
+    .navbar-brand{
+        margin-right: 38px;
+    }
+    .nav-item{
+        .nav-link{
+            padding:0 24px;
+            @include myfont(16px,500,mainFont);
+            color:#000;
+            text-transform: uppercase;
+        }
+    }
+    .navbar-collapse{
+
+        .mybutton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+    
+                border-radius: 79px;
+                background: #001E7C;
+                
+                width: 190px;
+                height: 54px;
+                align-items: center;
+                gap: 10px;
+                border:0;
+                @include myfont(16px,700,mainFont);
+                color:#F0F4FF;
+                img{
+                    margin-left: 10px;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+}
+.banner{
+    background: url(../images/bannermainimg.png) ;
+    background-position: center;
+    background-size: cover;
+    height: 580px;
+    width: 100%;
+    position:relative;
+    .overlay{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        background:rgba(211, 211, 211, 0.5);
+        display: flex;
+        align-items: center;
+        .left{
+            
+            h1{
+                @include myfont(50px,900,mainFontBlack);
+                color: #001E7C;
+            }
+        }
+        .rightform{
+            padding:37px 20px;
+            background-color: #fff;
+            
+        }
+    }
+}
