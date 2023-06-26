@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
     .myContainer {
       width: 960px;
       margin: 0 auto; } }
+  @media (min-width: 320px) and (max-width: 575px) {
+    .myContainer {
+      width: calc(100% - 30px);
+      margin: 0 auto; } }
 
 .subheading h3 {
   font-size: 40px;
@@ -17,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 52px; }
 .subheading p {
   font-size: 16px;
-  font-weight: 5000;
+  font-weight: 500;
   font-family: mainFont;
   color: #869BAD;
   margin-bottom: 40px; }
@@ -80,6 +84,76 @@ h1, h2, h3, h4, h5, h6 {
     width: 56px;
     height: 56px;
     margin-top: 12px; }
+
+.pdt100 {
+  padding-top: 100px; }
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 10px; }
+
+.checkbox input {
+  position: absolute;
+  width: 0px;
+  left: 50px;
+  opacity: 0;
+  cursor: pointer; }
+
+.checkbox .checkmark {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 48px !important;
+  height: 25px !important;
+  background: white;
+  border-radius: 3px;
+  outline: 1px solid #acacac;
+  transition: all 0.2s ease; }
+
+.checkbox:hover .checkmark {
+  background: #f4f4f5;
+  transition: all 0.2s ease; }
+
+.checkbox input:checked ~ .checkmark {
+  background: #3f7fed;
+  outline: 1px solid #5f7ef0; }
+
+.checkbox .checkmark::after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 50%;
+  top: 40%;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease; }
+
+.checkbox input:checked ~ .checkmark::after {
+  opacity: 1;
+  transition: all 0.2s ease; }
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: mainFont;
+  color: #869BAD; }
 
 @font-face {
   font-family: mainFont;
@@ -406,6 +480,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 49px 25px 21px 26px;
     position: relative;
     margin-bottom: 60px; }
+    .whychooseipe .wcubox.wsubox {
+      height: 230px; }
     .whychooseipe .wcubox .innersm {
       position: absolute;
       left: 26px;
@@ -431,5 +507,290 @@ h1, h2, h3, h4, h5, h6 {
 
 .header3 {
   margin-top: 0; }
+
+.studyinusamain {
+  padding-top: 80px; }
+
+.whystdus {
+  padding-top: 100px; }
+  .whystdus .subheading h3 {
+    padding-bottom: 20px; }
+  .whystdus .subheading p {
+    width: 749px;
+    margin: 0 auto; }
+
+.everythingyntkcards .subheading {
+  padding-bottom: 58px; }
+.everythingyntkcards .eyntkboxall .eyntkbox {
+  height: 250px;
+  width: 100%;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #E8E8E8;
+  padding: 13px; }
+  .everythingyntkcards .eyntkboxall .eyntkbox .wrap {
+    text-align: center; }
+  .everythingyntkcards .eyntkboxall .eyntkbox h4 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: mainFont;
+    color: #001223;
+    padding: 15px 0; }
+  .everythingyntkcards .eyntkboxall .eyntkbox p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: mainFont;
+    color: #869BAD; }
+
+.evrthngabtstdusa .subheading {
+  padding-top: 100px; }
+.evrthngabtstdusa .accordion {
+  margin-top: 50px; }
+  .evrthngabtstdusa .accordion .accordion-button:not(.collapsed) {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: mainFont;
+    color: #001223;
+    background-color: #fff;
+    box-shadow: none; }
+  .evrthngabtstdusa .accordion .accordion-button {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: mainFont;
+    color: #001223;
+    background-color: #fff;
+    box-shadow: none; }
+  .evrthngabtstdusa .accordion .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #E8E8E8;
+    background: #FFF; }
+  .evrthngabtstdusa .accordion .accordion-body ul {
+    list-style-type: disc; }
+    .evrthngabtstdusa .accordion .accordion-body ul li {
+      color: #869BAD;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: mainFont; }
+
+.connectwithexpert {
+  padding: 53px 60px;
+  border-radius: 5px;
+  background: #F0F4FF;
+  margin-top: 100px;
+  margin-bottom: 110px; }
+  .connectwithexpert .subheading p {
+    margin-top: 25px; }
+  .connectwithexpert .mybutton2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .connectwithexpert .mybutton2 button {
+      border-radius: 79px;
+      background: #006FDD;
+      width: 190px;
+      height: 54px;
+      align-items: center;
+      gap: 10px;
+      border: 0;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: mainFont;
+      color: #F0F4FF; }
+
+.newsandeventsmain {
+  padding-top: 100px; }
+
+.necards .necard {
+  height: 558px;
+  border-radius: 5px;
+  background: #F0F4FF;
+  position: relative;
+  margin-bottom: calc(var(--bs-gutter-x)); }
+  .necards .necard .necardsbody {
+    padding: 15px 15px 20px 15px; }
+    .necards .necard .necardsbody h4 {
+      font-size: 20px;
+      font-weight: 700;
+      font-family: mainFont;
+      color: #001223; }
+    .necards .necard .necardsbody p {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: mainFont;
+      color: #869BAD;
+      margin-top: 15px; }
+    .necards .necard .necardsbody .netimings {
+      margin-top: 60px;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+      padding-left: 15px; }
+    .necards .necard .necardsbody .netimingsbar {
+      height: 33px;
+      display: flex;
+      align-items: center; }
+      .necards .necard .necardsbody .netimingsbar img {
+        width: 25px;
+        height: 25px;
+        margin-right: 17px; }
+
+.newspagebottomheader {
+  margin-top: 100px; }
+
+.nedbanner {
+  background: url(../images/nedbanner.png);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px; }
+
+.nedmain {
+  padding-top: 50px; }
+  .nedmain .subheading h3 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: mainFont;
+    color: #001223; }
+  .nedmain .neform {
+    border-radius: 5px;
+    background: #F0F4FF;
+    padding: 24px 20px 24px 20px;
+    text-align: center; }
+  .nedmain h6 {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: mainFont;
+    color: #001E7C;
+    margin-bottom: 25px; }
+  .nedmain form input {
+    border-radius: 5px;
+    background: #fff;
+    display: inline-flex;
+    padding: 11px 100px 10px 13px;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: mainFont; }
+  .nedmain .bannerformbutton button {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #006FDD;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: mainFont;
+    color: #F0F4FF;
+    border: 0;
+    margin-top: 24px; }
+  .nedmain .netimings {
+    margin-top: 60px;
+    width: 100%;
+    padding-left: 15px; }
+  .nedmain .netimingsbar {
+    height: 33px;
+    display: flex;
+    align-items: center; }
+    .nedmain .netimingsbar img {
+      width: 25px;
+      height: 25px;
+      margin-right: 17px; }
+    .nedmain .netimingsbar p {
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: mainFont;
+      color: #001223; }
+
+.stdabrdipe {
+  padding-top: 100px; }
+
+.contactpage .map {
+  margin-top: 55px; }
+.contactpage .cbar {
+  display: flex;
+  align-items: center;
+  padding: 25px; }
+  .contactpage .cbar .detail h4 {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: mainFont;
+    margin-bottom: 6px; }
+  .contactpage .cbar .detail p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: mainFont;
+    color: #869BAD; }
+  .contactpage .cbar img {
+    margin-right: 22px; }
+.contactpage .neform {
+  border-radius: 5px;
+  background: #F0F4FF;
+  padding: 44px 20px 24px 20px;
+  text-align: center; }
+.contactpage form input {
+  border-radius: 5px;
+  background: #fff;
+  display: inline-flex;
+  padding: 11px 100px 10px 13px;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: mainFont; }
+.contactpage select {
+  height: 42px;
+  border: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: mainFont !important;
+  color: #869BAD !important; }
+  .contactpage select > option {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: mainFont !important;
+    color: #869BAD !important; }
+.contactpage .contactformbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .contactpage .contactformbutton button {
+    border-radius: 5px;
+    background: #006FDD;
+    margin-top: 50px;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: mainFont;
+    color: #F0F4FF; }
+    .contactpage .contactformbutton button img {
+      margin-left: 10px;
+      margin-top: -3px; }
 
 /*# sourceMappingURL=main.css.map */

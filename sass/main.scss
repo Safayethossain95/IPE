@@ -405,6 +405,9 @@
         padding: 49px 25px 21px 26px;
         position:relative;
         margin-bottom: 60px;
+        &.wsubox{
+            height: 230px;
+        }
         .innersm{
             position:absolute;
             left:26px;
@@ -431,3 +434,349 @@
 .header3{
     margin-top: 0;
 }
+.studyinusamain{
+    padding-top: 80px;
+}
+
+.whystdus{
+    padding-top: 100px;
+    .subheading{
+        h3{
+            padding-bottom: 20px;
+        }
+        p{
+            width: 749px;
+            margin:0 auto;
+        }
+    }
+}
+
+.everythingyntkcards{
+    .subheading{
+        padding-bottom: 58px;
+    }
+    .eyntkboxall{
+      .eyntkbox{
+        height: 250px;
+        width: 100%;
+        border:1px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        border: 1px solid #E8E8E8;
+        padding:13px;
+        .wrap{
+            text-align: center;
+        }
+        h4{
+            @include myfont(20px,700,mainFont);
+            color:#001223;
+            padding:15px 0;
+        }
+        p{
+            @include myfont(16px,500,mainFont);
+            color:#869BAD;
+            
+        }
+      }
+    }
+  }
+
+  .evrthngabtstdusa{
+    .subheading{
+        padding-top: 100px;
+    }
+
+    .accordion{
+        margin-top: 50px;
+
+        .accordion-button:not(.collapsed) {
+            @include myfont(20px,600,mainFont);
+            color: #001223;
+            background-color: #fff;
+            box-shadow:none;
+        }
+        .accordion-button {
+            @include myfont(20px,600,mainFont);
+            color: #001223;
+            background-color: #fff;
+            box-shadow:none;
+        }
+        .accordion-item{
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #E8E8E8;
+            background: #FFF;
+        }
+        .accordion-body{
+            ul{
+                list-style-type: disc;
+                li{
+                    color: #869BAD;
+                    @include myfont(16px,500,mainFont);
+                }
+            }
+        }
+    }
+
+  }
+
+  .connectwithexpert{
+    padding: 53px 60px;
+    border-radius: 5px;
+    background: #F0F4FF;
+    margin-top: 100px;
+    margin-bottom: 110px;
+    .subheading{
+        p{
+            margin-top: 25px;
+        }
+    }
+    .mybutton2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+
+            border-radius: 79px;
+            
+            background: #006FDD;
+            
+            width: 190px;
+            height: 54px;
+            align-items: center;
+            gap: 10px;
+            border:0;
+            @include myfont(16px,700,mainFont);
+            color:#F0F4FF;
+        }
+    }
+  }
+
+  .newsandeventsmain{
+    padding-top: 100px;
+  }
+
+  .necards{
+    .necard{
+        height: 558px;
+        border-radius: 5px;
+        background: #F0F4FF;
+         position:relative;
+         margin-bottom: calc(var(--bs-gutter-x));
+        .necardsbody{
+            padding: 15px 15px 20px 15px;
+           
+            h4{
+                @include myfont(20px,700,mainFont);
+                color:#001223;
+                
+            }
+            p{
+                @include myfont(16px,500,mainFont);
+                color:#869BAD;
+                margin-top: 15px;
+            }
+            .netimings{
+                margin-top: 60px;
+                width:100%;
+                position:absolute;
+                left:50%;
+                transform:translateX(-50%);
+                bottom:20px;
+                padding-left: 15px;
+            }
+            .netimingsbar{
+                
+                height: 33px;
+                img{
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 17px;
+                }
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+  }
+
+  .newspagebottomheader{
+    margin-top: 100px;
+  }
+
+  .nedbanner{
+    background: url(../images/nedbanner.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+  }
+  .nedmain{
+    padding-top: 50px;
+    .subheading{
+        h3{
+            @include myfont(40px,700,mainFont);
+            color:#001223;
+        }
+    }
+    .neform{
+        border-radius: 5px;
+        background: #F0F4FF;
+        padding:24px 20px 24px 20px;
+        text-align: center;
+            }
+            h6{
+                @include myfont(25px,700,mainFont);
+                color:#001E7C;
+                margin-bottom: 25px;
+                
+            }
+    form{
+        input{
+            border-radius: 5px;
+            background: #fff;
+            display: inline-flex;
+            padding: 11px 100px 10px 13px;
+            align-items: center;
+            width: 100%;
+            border:0;
+            margin-bottom: 20px;
+            @include myfont(14px,400,mainFont);
+        }
+    }
+    .bannerformbutton{
+                
+        button{
+            width: 100%;
+            height: 40px;
+            margin:0 auto;
+            border-radius: 5px;
+            background: #006FDD;
+            display: flex;
+            justify-content: center;
+            height: 40px;
+            padding: 16px 32px;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            @include myfont(16px,700,mainFont);
+            color:#F0F4FF;
+            border:0;
+            margin-top: 24px;
+        }
+    }
+    .netimings{
+      margin-top: 60px;
+      width:100%;
+      
+      
+      
+      
+      padding-left: 15px;
+  }
+  .netimingsbar{
+      
+      height: 33px;
+      img{
+          width: 25px;
+          height: 25px;
+          margin-right: 17px;
+      }
+      display: flex;
+      align-items: center;
+      p{
+        margin-bottom: 0;
+        @include myfont(16px,500,mainFont);
+        color:#001223;
+      }
+  }
+  }
+
+
+  .stdabrdipe{
+    padding-top: 100px;
+  }
+
+  .contactpage{
+    .map{
+        margin-top: 55px;
+    }
+    .cbar{
+        display: flex;
+        align-items: center;
+        padding: 25px;
+        .detail{
+            h4{
+                margin-bottom: 0;
+                @include myfont(20px,700,mainFont);
+                margin-bottom: 6px;
+            }
+            p{
+                margin-bottom: 0;
+                @include myfont(16px,400,mainFont);
+                color:#869BAD;
+            }
+        }
+        img{
+            margin-right: 22px;
+        }
+    }
+    .neform{
+        border-radius: 5px;
+        background: #F0F4FF;
+        padding:44px 20px 24px 20px;
+        text-align: center;
+            }
+form{
+        input{
+            border-radius: 5px;
+            background: #fff;
+            display: inline-flex;
+            padding: 11px 100px 10px 13px;
+            align-items: center;
+            width: 100%;
+            border:0;
+            margin-bottom: 20px;
+            @include myfont(14px,400,mainFont);
+        }
+    }
+    select{
+        height: 42px;
+        border:0;
+        margin-bottom: 20px;
+        @include myfont(14px,400,mainFont !important);
+        color:#869BAD!important;
+        &>option{
+            
+            @include myfont(14px,400,mainFont !important);
+            color:#869BAD!important;
+            p{
+            }
+        }
+    }
+    .contactformbutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+
+            border-radius: 5px;
+            background: #006FDD;
+            margin-top: 50px;
+            width: 100%;
+            height: 45px;
+            align-items: center;
+            gap: 10px;
+            border:0;
+            @include myfont(16px,700,mainFont);
+            color:#F0F4FF;
+            img{
+                margin-left: 10px;
+                margin-top: -3px;
+            }
+        }
+    }
+  }
