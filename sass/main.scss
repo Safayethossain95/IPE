@@ -70,7 +70,7 @@
         position:absolute;
         width: 100%;
         height: 100%;
-        background:rgba(211, 211, 211, 0.5);
+        background:rgba(211, 211, 211, 0.8);
         display: flex;
         align-items: center;
         .left{
@@ -79,11 +79,355 @@
                 @include myfont(50px,900,mainFontBlack);
                 color: #001E7C;
             }
+            p{
+
+                color:#869BAD
+            }
         }
         .rightform{
             padding:37px 20px;
             background-color: #fff;
+            .bannerformbutton{
+                
+                button{
+                    width: 117px;
+                    height: 40px;
+                    margin:0 auto;
+                    border-radius: 5px;
+                    background: #006FDD;
+                    display: flex;
+                    justify-content: center;
+                    height: 40px;
+                    padding: 16px 32px;
+                    align-items: center;
+                    gap: 10px;
+                    flex-shrink: 0;
+                    @include myfont(16px,700,mainFont);
+                    color:#F0F4FF;
+                    border:0;
+                    margin-top: 77px;
+                }
+            }
+            h5{
+                text-align: center;
+                color: #001E7C;                                
+                 @include myfont(25px,700,mainFont);
+                 margin-bottom: 40px;
+            }
+            form{
+                input{
+                    border-radius: 5px;
+                    background: #F0F4FF;
+                    display: inline-flex;
+                    padding: 11px 100px 10px 13px;
+                    align-items: center;
+                    width: 100%;
+                    border:0;
+                    margin-bottom: 20px;
+                    @include myfont(14px,400,mainFont);
+                }
+            }
+        }
+    }
+}
+
+
+.countersection{
+    padding-top: 100px;
+    .smbox{
+        width: 150px;
+        height: 150px;
+        border:1px solid #E8E8E8;
+        padding:14px;
+        text-align: center;
+        h5{
+            @include myfont(16px,700,mainFont);
+            color:#006FDD;
+            text-align: left;
+            margin-top: 17px;
+        }
+        p{
+            @include myfont(16px,400,mainFont);
+            color:#001223;
+        }
+    }
+}
+
+.wherecanyoustudy{
+    padding-top: 100px;
+    
+    img{
+        margin-bottom: calc(var(--bs-gutter-x));
+        width:100%;
+    }
+}
+.ourservice{
+    padding-top: 140px;
+    img{
+        margin-bottom: calc(var(--bs-gutter-x));
+    }
+    .spill{
+        display: flex;
+        align-items: center;
+        img{
+            margin-bottom: 0;
+        }
+        p{
+            margin-left: 22px;
+            @include myfont(20px,500,mainFont);
+            margin-bottom: 0;
+        }
+    }
+}
+.topuniversities{
+    padding-top: 150px;
+    .viewmorebutton{
+        button{
+            background-color: #006FDD;
+            width: 174px;
+            height: 50px;
+            border-radius: 43px;
+            @include myfont(16px,700,mainFont);
+            color:#F0F4FF;
+            border:0;
+            img{
+                margin-top: -3px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.ourpartners{
+    padding-top: 150px;
+    .partnersinglebox{
+        height: 100px;
+        width: 100%;
+        border-radius: 5px;
+        background: #FFF;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: calc(var(--bs-gutter-x));
+        transition:0.4s;
+        &:hover{
+            box-shadow: 0px 3px 10px 0px rgba(0, 30, 124, 0.10);
+        }
+    }
+}
+.stories{
+    padding-top: 150px;
+    .subheading{
+        p{
+            margin-bottom: 85px;
+        }
+    }
+    .firstrowpd{
+        @include media(lgDevice){
+            padding-right: 0;
+            padding-left: 0;
+
+        }
+       
+        .firstimg{
+            
+                @include media(lgDevice){
+                    width: 100%;
+                    height: 324px!important;
+                }
             
         }
     }
+    img{
+        margin-bottom: 15px;
+        @include media(lgDevice){
+            width: 100%;
+        }
+    }  
+    .myrow{
+        display: flex;
+        justify-content: space-between;
+        @include media(lgDevice){
+            padding:0 10px;
+        }
+        .column{
+            
+            img{
+                margin-bottom: 15px;
+                @include media(lgDevice){
+                    width: 100%;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }   
+            &.two{
+                width: calc(40% - 30px);
+                
+            }
+            &.one{
+                width: 25%;
+                
+
+                
+            }
+        }
+    }
+   
+}
+.header2{
+    margin-top: 130px;
+}
+
+.footer{
+    padding-top: 50px;
+    background-color: #F0F4FF;
+    
+    .footerlogoimg{
+        margin-bottom: 10px;
+    }
+    .socialicons{
+        display: flex;
+        margin-bottom: 84px;
+        .ftsmbox{
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                font-size: 25px;
+                color:#869BAD;
+            }
+        }
+    }
+    .ftlist{
+        ul{
+            padding-left: 0;
+            li{
+                line-height: 32px;
+                a{
+                    @include myfont(14px,400,mainFont);
+                    color:#869BAD;
+                }
+            }
+        }
+    }
+    .emailinput{
+        position: relative;
+        button{
+            position:absolute;
+            width: 120px;
+            height: 50px;
+            background-color:  #001E7C;
+            color:#fff;
+            right:0;
+            top:0;
+        }
+        input{
+            border:0;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            &::placeholder{
+                @include myfont(14px,400,mainFont);
+                color:#869BAD;
+                padding-left: 13px;
+            }
+        }
+        p{
+            @include myfont(14px,400,mainFont);
+            color:#869BAD;
+            margin-top: 14px;
+        }
+    }
+    .copyright{
+        height: 66px;
+        border-top: 1px solid rgba(134, 155, 173, 0.5);
+
+        h6{
+            @include myfont(12px,400,mainFont);
+            color:#869BAD;
+            line-height: 66px;
+        }
+    }
+}
+.aboutusmain{
+    padding-top: 100px;
+    
+    .ourmission{
+        height: 248px;
+        width: 100%;
+        background-color: #F0F4FF;
+        padding: 48px 61px;
+        margin-top: 60px;
+
+    }
+}
+.ourserviceaboutpage{
+        margin-top: 100px!important;
+    }
+    .lleft{
+        img{
+            margin-right: 30px;
+            width: 60px;
+        }              
+    }
+    .rright{
+        h4{
+            margin-bottom: 20px;
+        }
+    }
+    .ourservicecontent{
+        h4{
+            @include myfont(20px,700,mainFont);
+            color:#001223;
+        }
+        
+    }
+
+
+
+.whychooseipe{
+    padding-top: 100px;
+    .subheading{
+        h3{
+            padding-bottom: 100px;
+        }
+    }
+    .wcubox{
+        background-color: #F0F4FF;
+        height: 170px;
+        width: 100%;
+        padding: 49px 25px 21px 26px;
+        position:relative;
+        margin-bottom: 60px;
+        .innersm{
+            position:absolute;
+            left:26px;
+            top:-30px;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            box-shadow: 0px 3px 10px 0px rgba(0, 30, 124, 0.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h5{
+            @include myfont(20px,700,mainFont);
+            color:#001223;
+        }
+        p{
+            @include myfont(16px,500,mainFont);
+            color:#001223;
+            padding-top: 6px;
+        }
+    }
+}
+.header3{
+    margin-top: 0;
 }

@@ -6,4 +6,88 @@ h1,h2,h3,h4,h5,h6{
 .myContainer{
     width: 1050px;
     margin:0 auto;
+
+    @include media(lgDevice){
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+.subheading{
+    h3{
+        @include myfont(40px,900,mainFontBlack);
+        color:#001E7C;
+        line-height: 52px;
+    }
+    p{
+        @include myfont(16px,5000,mainFont);
+        color: #869BAD;
+        margin-bottom: 40px;
+    }
+}
+.next{
+    width: 40px;
+    height: 40px;
+    background: #006FDD;
+
+    border-radius: 50%;
+    font-size: 20px;
+    color:#fff;
+
+    position:absolute;
+    right:-10px;
+    top:50%;
+    transform: translateY(-50%);
+    
+    text-align: center;
+    z-index: 999;
+  
+  }
+  .next::before{
+    line-height: 40px;
+  }
+  .prev{
+    width: 40px;
+    height: 40px;
+    background-color: #869BAD;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+
+    position:absolute;
+    left:-10px;
+    top:50%;
+    transform: translateY(-50%);
+    
+    text-align: center;
+    z-index: 999;
+  
+  }
+  .prev::before{
+    line-height:40px ;
+  }
+  
+  .ftsmheading{
+    margin-top: 35px;
+    p{
+        @include myfont(16px,700,mainFont);
+        color:#001E7C;
+    }
+  }
+  .whatsapp {
+	position: sticky!important;
+  position: -webkit-sticky;
+	width: 80px;
+	height: 80px;
+	left: calc(100% - 120px);
+	top: 50px;
+	background: #25D366;
+	border-radius: 85px;
+	z-index: 999;
+	/* left: 0; */
+    text-align: center;
+    img{
+        width: 56px;
+        height: 56px;
+        margin-top: 12px;
+    }
 }
