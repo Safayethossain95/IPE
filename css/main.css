@@ -1,6 +1,73 @@
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0; }
 
+.active {
+  color: #006FDD !important; }
+
+.navbar {
+  z-index: 999; }
+  .navbar .nav-link.active {
+    color: #006FDD !important; }
+  .navbar .nav-item:hover a {
+    color: #006FDD;
+    font-weight: 500 !important; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
+
+input:focus-visible {
+  outline: none !important; }
+
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  border-bottom: 1px solid #F0F4FF; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .navbar {
+      height: 100px !important; } }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .navbar .navbar-collapse {
+      background: #fff;
+      z-index: 999; } }
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none !important; }
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0.55);
+  border-color: transparent; }
+
+@media (min-width: 1400px) {
+  .desktop {
+    display: block; } }
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .desktop {
+    display: block; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .desktop {
+    display: block; } }
+@media (min-width: 320px) and (max-width: 991px) {
+  .desktop {
+    display: none; } }
+
+@media (min-width: 1400px) {
+  .mobile {
+    display: none; } }
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .mobile {
+    display: none; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mobile {
+    display: none; } }
+@media (min-width: 320px) and (max-width: 991px) {
+  .mobile {
+    display: block; } }
+
 .myContainer {
   width: 1050px;
   margin: 0 auto; }
@@ -8,10 +75,12 @@ h1, h2, h3, h4, h5, h6 {
     .myContainer {
       width: 960px;
       margin: 0 auto; } }
-  @media (min-width: 320px) and (max-width: 575px) {
+  @media (min-width: 320px) and (max-width: 991px) {
     .myContainer {
       width: calc(100% - 30px);
-      margin: 0 auto; } }
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
 
 .subheading h3 {
   font-size: 40px;
@@ -19,17 +88,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: mainFontBlack;
   color: #001E7C;
   line-height: 52px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .subheading h3 {
+      font-size: 20px;
+      font-weight: 900;
+      font-family: mainFontBlack; } }
 .subheading p {
   font-size: 16px;
   font-weight: 500;
   font-family: mainFont;
   color: #869BAD;
   margin-bottom: 40px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .subheading p {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: mainFontBlack; } }
 
 .next {
   width: 40px;
   height: 40px;
   background: #006FDD;
+  transition: 0.4s;
   border-radius: 50%;
   font-size: 20px;
   color: #fff;
@@ -38,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  z-index: 999; }
+  z-index: 888; }
 
 .next::before {
   line-height: 40px; }
@@ -50,15 +130,25 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   font-size: 20px;
   color: #fff;
+  transition: 0.4s;
   position: absolute;
-  left: -10px;
+  left: -20px;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  z-index: 999; }
+  z-index: 888; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .prev {
+      display: none !important; } }
 
 .prev::before {
   line-height: 40px; }
+
+.topslider .next.slick-disabled:last-child {
+  background-color: #869BAD !important;
+  /* Set your desired color for the last slide arrow */ }
+.topslider .prev.slick-enabled {
+  background-color: #006FDD !important; }
 
 .ftsmheading {
   margin-top: 35px; }
@@ -69,12 +159,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #001E7C; }
 
 .whatsapp {
-  position: sticky !important;
+  position: fixed !important;
   position: -webkit-sticky;
   width: 80px;
   height: 80px;
-  left: calc(100% - 120px);
-  top: 50px;
+  right: 40px;
+  bottom: 40px;
   background: #25D366;
   border-radius: 85px;
   z-index: 999;
@@ -113,16 +203,18 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   top: 0;
   left: 0;
-  width: 48px !important;
+  width: 39px !important;
   height: 25px !important;
   background: white;
   border-radius: 3px;
   outline: 1px solid #acacac;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  margin-right: 12px; }
 
 .checkbox:hover .checkmark {
   background: #f4f4f5;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  border: 0; }
 
 .checkbox input:checked ~ .checkmark {
   background: #3f7fed;
@@ -134,8 +226,8 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   left: 50%;
   top: 40%;
-  width: 4px;
-  height: 8px;
+  width: 10px;
+  height: 20px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -144,6 +236,19 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translate(-50%, -50%) rotate(45deg);
   opacity: 0;
   transition: all 0.2s ease; }
+
+input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: #fff;
+  /* Specify the desired background color */
+  border-radius: 2px;
+  /* Add border-radius for a rounded checkbox appearance */
+  margin-right: 6px;
+  /* Add some spacing between the checkbox and label */ }
 
 .checkbox input:checked ~ .checkmark::after {
   opacity: 1;
@@ -154,6 +259,32 @@ label {
   font-weight: 500;
   font-family: mainFont;
   color: #869BAD; }
+
+.mybutton button, .viewmorebutton button {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.mybutton p, .viewmorebutton p {
+  margin-bottom: 0;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: mainFont; }
+.mybutton img, .viewmorebutton img {
+  transition: 0.2s ease-in-out; }
+.mybutton:hover img, .viewmorebutton:hover img {
+  margin-left: 8px; }
+.mybutton:hover p, .viewmorebutton:hover p {
+  margin-right: 8px; }
+
+.underconstructionmain {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center; }
+  .underconstructionmain a {
+    color: #006FDD;
+    text-decoration: underline !important; }
 
 @font-face {
   font-family: mainFont;
@@ -173,7 +304,15 @@ label {
     font-weight: 700;
     font-family: mainFont;
     color: #F0F4FF; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .header h3 {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: mainFont; } }
 
+@media (min-width: 320px) and (max-width: 991px) {
+  .navbar .navbar-nav {
+    text-align: center; } }
 .navbar .navbar-brand {
   margin-right: 38px; }
 .navbar .nav-item .nav-link {
@@ -183,6 +322,9 @@ label {
   font-family: mainFont;
   color: #000;
   text-transform: uppercase; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .navbar .nav-item .nav-link {
+      margin: 14px 0; } }
 .navbar .navbar-collapse .mybutton {
   display: flex;
   justify-content: center;
@@ -199,34 +341,62 @@ label {
     font-weight: 700;
     font-family: mainFont;
     color: #F0F4FF; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .navbar .navbar-collapse .mybutton button {
+        margin-bottom: 30px; } }
     .navbar .navbar-collapse .mybutton button img {
-      margin-left: 10px;
-      margin-top: -3px; }
+      margin-left: 10px; }
 
 .banner {
-  background: url(../images/bannermainimg.png);
-  background-position: center;
-  background-size: cover;
   height: 580px;
   width: 100%;
   position: relative; }
+  .banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Adjust the video sizing to cover the entire div */ }
+  .banner.bannermobile {
+    height: 700px !important; }
   .banner .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(211, 211, 211, 0.8);
+    background: rgba(240, 244, 255, 0.8);
     display: flex;
     align-items: center; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .banner .overlay {
+        display: unset;
+        padding-top: 73px; } }
     .banner .overlay .left h1 {
       font-size: 50px;
       font-weight: 900;
       font-family: mainFontBlack;
       color: #001E7C; }
+      @media (min-width: 320px) and (max-width: 991px) {
+        .banner .overlay .left h1 {
+          font-size: 30px;
+          font-weight: 900;
+          font-family: mainFontBlack; } }
     .banner .overlay .left p {
       color: #869BAD; }
     .banner .overlay .rightform {
       padding: 37px 20px;
       background-color: #fff; }
+      @media (min-width: 320px) and (max-width: 991px) {
+        .banner .overlay .rightform {
+          padding: 37px 20px;
+          background-color: #fff;
+          position: absolute;
+          top: calc(100% - 405px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 86%;
+          border: 1px solid #F0F4FF; } }
       .banner .overlay .rightform .bannerformbutton button {
         width: 117px;
         height: 40px;
@@ -246,6 +416,9 @@ label {
         color: #F0F4FF;
         border: 0;
         margin-top: 77px; }
+        @media (min-width: 320px) and (max-width: 991px) {
+          .banner .overlay .rightform .bannerformbutton button {
+            margin-top: 40px; } }
       .banner .overlay .rightform h5 {
         text-align: center;
         color: #001E7C;
@@ -268,6 +441,9 @@ label {
 
 .countersection {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .countersection {
+      padding-top: 150px; } }
   .countersection .smbox {
     width: 150px;
     height: 150px;
@@ -286,17 +462,58 @@ label {
       font-weight: 400;
       font-family: mainFont;
       color: #001223; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .countersection .smbox {
+        margin-bottom: 30px; } }
 
 .wherecanyoustudy {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .wherecanyoustudy {
+      padding-top: 50px; } }
   .wherecanyoustudy img {
-    margin-bottom: calc(var(--bs-gutter-x));
     width: 100%; }
+  .wherecanyoustudy .imgbox {
+    margin-bottom: calc(var(--bs-gutter-x));
+    background-color: red;
+    position: relative;
+    overflow: hidden; }
+    .wherecanyoustudy .imgbox img {
+      transition: 0.2s ease-in-out; }
+    .wherecanyoustudy .imgbox:hover img {
+      overflow: hidden;
+      transform: scale(1.05); }
+    .wherecanyoustudy .imgbox .overlay {
+      position: absolute;
+      background-color: #006FDD;
+      color: #fff;
+      bottom: 0px;
+      right: 0px;
+      height: 30px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      z-index: 888; }
+      .wherecanyoustudy .imgbox .overlay p {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: mainFontBlack; }
 
 .ourservice {
   padding-top: 140px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .ourservice {
+      padding-top: 50px; } }
   .ourservice img {
     margin-bottom: calc(var(--bs-gutter-x)); }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .ourservice .wrap {
+      display: flex;
+      flex-wrap: wrap; }
+      .ourservice .wrap img {
+        width: 40px;
+        height: 40px; } }
   .ourservice .spill {
     display: flex;
     align-items: center; }
@@ -308,25 +525,42 @@ label {
       font-weight: 500;
       font-family: mainFont;
       margin-bottom: 0; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .ourservice .spill {
+        width: 50%;
+        margin-bottom: 20px; }
+        .ourservice .spill p {
+          margin-left: 15px;
+          font-size: 14px;
+          font-weight: 500;
+          font-family: mainFont;
+          margin-bottom: 0; } }
 
 .topuniversities {
   padding-top: 150px; }
-  .topuniversities .viewmorebutton button {
-    background-color: #006FDD;
-    width: 174px;
-    height: 50px;
-    border-radius: 43px;
-    font-size: 16px;
-    font-weight: 700;
-    font-family: mainFont;
-    color: #F0F4FF;
-    border: 0; }
-    .topuniversities .viewmorebutton button img {
-      margin-top: -3px;
-      margin-left: 10px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .topuniversities {
+      padding-top: 50px; } }
+  .topuniversities .viewmorebutton {
+    width: 174px; }
+    .topuniversities .viewmorebutton button {
+      background-color: #006FDD;
+      width: 100%;
+      height: 50px;
+      border-radius: 43px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: mainFont;
+      color: #F0F4FF;
+      border: 0; }
+      .topuniversities .viewmorebutton button img {
+        margin-left: 10px; }
 
 .ourpartners {
   padding-top: 150px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .ourpartners {
+      padding-top: 50px; } }
   .ourpartners .partnersinglebox {
     height: 100px;
     width: 100%;
@@ -336,18 +570,31 @@ label {
     align-items: center;
     justify-content: center;
     margin-bottom: calc(var(--bs-gutter-x));
-    transition: 0.4s; }
-    .ourpartners .partnersinglebox:hover {
-      box-shadow: 0px 3px 10px 0px rgba(0, 30, 124, 0.1); }
+    transition: 0.4s;
+    box-shadow: 0px 3px 10px 0px rgba(0, 30, 124, 0.1); }
+    .ourpartners .partnersinglebox img {
+      height: 100%; }
+      @media (min-width: 320px) and (max-width: 991px) {
+        .ourpartners .partnersinglebox img {
+          width: 100%; } }
 
 .stories {
   padding-top: 150px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .stories {
+      padding-top: 50px; } }
   .stories .subheading p {
     margin-bottom: 85px; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .stories .subheading p {
+        margin-bottom: 25px !important; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .stories .firstrowpd {
       padding-right: 0;
       padding-left: 0; } }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .stories .firstrowpd img {
+      width: 100%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .stories .firstrowpd .firstimg {
       width: 100%;
@@ -377,15 +624,25 @@ label {
 
 .header2 {
   margin-top: 130px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .header2 {
+      margin-top: 50px !important; } }
 
 .footer {
   padding-top: 50px;
   background-color: #F0F4FF; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .footer {
+      padding-top: 0 !important; } }
   .footer .footerlogoimg {
     margin-bottom: 10px; }
   .footer .socialicons {
     display: flex;
     margin-bottom: 84px; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .footer .socialicons {
+        justify-content: center;
+        margin: 50px 0 37px 0; } }
     .footer .socialicons .ftsmbox {
       margin-right: 15px;
       width: 40px;
@@ -416,18 +673,26 @@ label {
       background-color: #001E7C;
       color: #fff;
       right: 0;
-      top: 0; }
+      top: 0;
+      border: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: mainFont; }
     .footer .emailinput input {
       border: 0;
       width: 100%;
       height: 50px;
-      background-color: #fff; }
+      background-color: #fff;
+      padding-left: 13px;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: mainFont; }
       .footer .emailinput input::placeholder {
         font-size: 14px;
         font-weight: 400;
         font-family: mainFont;
-        color: #869BAD;
-        padding-left: 13px; }
+        color: #869BAD; }
     .footer .emailinput p {
       font-size: 14px;
       font-weight: 400;
@@ -437,24 +702,41 @@ label {
   .footer .copyright {
     height: 66px;
     border-top: 1px solid rgba(134, 155, 173, 0.5); }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .footer .copyright {
+        height: 130px;
+        padding-top: 15px; } }
     .footer .copyright h6 {
       font-size: 12px;
       font-weight: 400;
       font-family: mainFont;
       color: #869BAD;
       line-height: 66px; }
+      @media (min-width: 320px) and (max-width: 991px) {
+        .footer .copyright h6 {
+          height: 28px; } }
 
 .aboutusmain {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .aboutusmain {
+      padding-top: 50px; } }
   .aboutusmain .ourmission {
     height: 248px;
     width: 100%;
     background-color: #F0F4FF;
     padding: 48px 61px;
     margin-top: 60px; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .aboutusmain .ourmission {
+        height: unset;
+        padding-bottom: 0; } }
 
 .ourserviceaboutpage {
   margin-top: 100px !important; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .ourserviceaboutpage {
+      margin-top: 65px !important; } }
 
 .lleft img {
   margin-right: 30px;
@@ -471,8 +753,14 @@ label {
 
 .whychooseipe {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .whychooseipe {
+      padding-top: 20px !important; } }
   .whychooseipe .subheading h3 {
     padding-bottom: 100px; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .whychooseipe .subheading h3 {
+        padding-bottom: 50px; } }
   .whychooseipe .wcubox {
     background-color: #F0F4FF;
     height: 170px;
@@ -480,6 +768,9 @@ label {
     padding: 49px 25px 21px 26px;
     position: relative;
     margin-bottom: 60px; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .whychooseipe .wcubox {
+        height: 244px; } }
     .whychooseipe .wcubox.wsubox {
       height: 230px; }
     .whychooseipe .wcubox .innersm {
@@ -504,12 +795,20 @@ label {
       font-family: mainFont;
       color: #001223;
       padding-top: 6px; }
+      @media (min-width: 320px) and (max-width: 991px) {
+        .whychooseipe .wcubox p {
+          font-size: 12px;
+          font-weight: 500;
+          font-family: mainFont; } }
 
 .header3 {
   margin-top: 0; }
 
 .studyinusamain {
   padding-top: 80px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .studyinusamain {
+      padding-top: 0 !important; } }
 
 .whystdus {
   padding-top: 100px; }
@@ -518,6 +817,9 @@ label {
   .whystdus .subheading p {
     width: 749px;
     margin: 0 auto; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .whystdus .subheading p {
+        width: unset; } }
 
 .everythingyntkcards .subheading {
   padding-bottom: 58px; }
@@ -532,6 +834,9 @@ label {
   border-radius: 5px;
   border: 1px solid #E8E8E8;
   padding: 13px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .everythingyntkcards .eyntkboxall .eyntkbox {
+      margin-bottom: 30px; } }
   .everythingyntkcards .eyntkboxall .eyntkbox .wrap {
     text-align: center; }
   .everythingyntkcards .eyntkboxall .eyntkbox h4 {
@@ -548,6 +853,9 @@ label {
 
 .evrthngabtstdusa .subheading {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .evrthngabtstdusa .subheading {
+      padding-top: 50px !important; } }
 .evrthngabtstdusa .accordion {
   margin-top: 50px; }
   .evrthngabtstdusa .accordion .accordion-button:not(.collapsed) {
@@ -583,8 +891,14 @@ label {
   background: #F0F4FF;
   margin-top: 100px;
   margin-bottom: 110px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .connectwithexpert {
+      padding: 53px 20px; } }
   .connectwithexpert .subheading p {
     margin-top: 25px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .connectwithexpert .subheading h3 {
+      line-height: 25px !important; } }
   .connectwithexpert .mybutton2 {
     display: flex;
     justify-content: center;
@@ -604,6 +918,9 @@ label {
 
 .newsandeventsmain {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .newsandeventsmain {
+      padding-top: 50px !important; } }
 
 .necards .necard {
   height: 558px;
@@ -643,6 +960,9 @@ label {
 
 .newspagebottomheader {
   margin-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .newspagebottomheader {
+      margin-top: 50px !important; } }
 
 .nedbanner {
   background: url(../images/nedbanner.png);
@@ -650,6 +970,12 @@ label {
   background-size: cover;
   background-repeat: no-repeat;
   height: 350px; }
+  .nedbanner.mobile {
+    background: url(../images/nedetailbannermb.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px; }
 
 .nedmain {
   padding-top: 50px; }
@@ -658,6 +984,12 @@ label {
     font-weight: 700;
     font-family: mainFont;
     color: #001223; }
+    @media (min-width: 320px) and (max-width: 991px) {
+      .nedmain .subheading h3 {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: mainFont;
+        line-height: 30px; } }
   .nedmain .neform {
     border-radius: 5px;
     background: #F0F4FF;
@@ -721,9 +1053,15 @@ label {
 
 .stdabrdipe {
   padding-top: 100px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .stdabrdipe {
+      padding-top: 50px !important; } }
 
 .contactpage .map {
   margin-top: 55px; }
+  @media (min-width: 320px) and (max-width: 991px) {
+    .contactpage .map {
+      margin-bottom: 40px; } }
 .contactpage .cbar {
   display: flex;
   align-items: center;
@@ -792,5 +1130,34 @@ label {
     .contactpage .contactformbutton button img {
       margin-left: 10px;
       margin-top: -3px; }
+
+.drpdwn {
+  position: fixed;
+  width: 950px;
+  height: 290px;
+  background-color: #006FDD;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s ease-in-out;
+  padding: 55px;
+  z-index: 999; }
+  .drpdwn .drpitem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; }
+    .drpdwn .drpitem .text p {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: mainFont;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      margin-left: 15px; }
+
+.studyinusamain .subheading p {
+  margin-top: 15px;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

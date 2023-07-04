@@ -2,6 +2,102 @@
 h1,h2,h3,h4,h5,h6{
     margin-bottom: 0;
 }
+.active{ 
+  
+  color:#006FDD !important;
+}
+.navbar{
+  z-index: 999;
+  .nav-link.active{ 
+    
+    color:#006FDD !important;
+}
+  .nav-item{
+    &:hover{
+      a{
+        color:#006FDD;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+input{
+  &:focus-visible{
+    outline:none!important;
+  }
+}
+.navbar{
+  background-color: #fff;
+  height: 80px;
+  border-bottom: 1px solid #F0F4FF;
+  @include media(xsmDevice){
+    height: 100px!important;
+  }
+  .navbar-collapse{
+    @include media(xsmDevice){
+      background: #fff;
+      z-index: 999;
+
+    }
+  
+  }
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none!important;
+}
+.navbar-light .navbar-toggler {
+  color: rgba(0,0,0,.55);
+   border-color: transparent; 
+}
+
+.desktop{
+  @include media(xxlgDevice){
+    display: block;
+  }
+  @include media(xlgDevice){
+    display: block;
+  }
+  @include media(lgDevice){
+    display: block;
+  }
+  @include media(xsmDevice){
+    display: none;
+  }
+  @include media(smDevice){
+    display: none;
+  }
+  @include media(mdDevice){
+    display: none;
+  }
+}
+.mobile{
+  @include media(xxlgDevice){
+    display: none;
+  }
+  @include media(xlgDevice){
+    display: none;
+  }
+  @include media(lgDevice){
+    display: none;
+  }
+  @include media(xsmDevice){
+    display: block;
+  }
+  @include media(smDevice){
+    display: block;
+  }
+  @include media(mdDevice){
+    display: block;
+  }
+}
 
 .myContainer{
     width: 1050px;
@@ -14,6 +110,8 @@ h1,h2,h3,h4,h5,h6{
     @include media(xsmDevice){
       width: calc(100% - 30px);
       margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 }
 .subheading{
@@ -21,11 +119,17 @@ h1,h2,h3,h4,h5,h6{
         @include myfont(40px,900,mainFontBlack);
         color:#001E7C;
         line-height: 52px;
+        @include media(xsmDevice){
+          @include myfont(20px,900,mainFontBlack);
+        }
     }
     p{
         @include myfont(16px,500,mainFont);
         color: #869BAD;
         margin-bottom: 40px;
+        @include media(xsmDevice){
+          @include myfont(14px,500,mainFontBlack);
+        }
     }
 }
 .next{
@@ -33,6 +137,7 @@ h1,h2,h3,h4,h5,h6{
     height: 40px;
     background: #006FDD;
 
+    transition:0.4s;
     border-radius: 50%;
     font-size: 20px;
     color:#fff;
@@ -43,7 +148,7 @@ h1,h2,h3,h4,h5,h6{
     transform: translateY(-50%);
     
     text-align: center;
-    z-index: 999;
+    z-index: 888;
   
   }
   .next::before{
@@ -56,20 +161,34 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 50%;
     font-size: 20px;
     color: #fff;
+    transition:0.4s;
 
     position:absolute;
-    left:-10px;
+    left:-20px;
     top:50%;
     transform: translateY(-50%);
     
     text-align: center;
-    z-index: 999;
+    z-index: 888;
+    @include media(xsmDevice){
+      display: none!important;
+    }
   
   }
   .prev::before{
     line-height:40px ;
   }
   
+.topslider{
+  // .prev.slick-disabled:last-child 
+  .next.slick-disabled:last-child
+  {
+    background-color: #869BAD!important; /* Set your desired color for the last slide arrow */
+  }
+  .prev.slick-enabled{
+    background-color: #006FDD!important;
+  }
+}
   .ftsmheading{
     margin-top: 35px;
     p{
@@ -78,12 +197,13 @@ h1,h2,h3,h4,h5,h6{
     }
   }
   .whatsapp {
-	position: sticky!important;
+	position: fixed !important;
   position: -webkit-sticky;
 	width: 80px;
 	height: 80px;
-	left: calc(100% - 120px);
-	top: 50px;
+	// left: calc(100% - 120px);
+  right:40px;
+	bottom: 40px;
 	background: #25D366;
 	border-radius: 85px;
 	z-index: 999;
@@ -128,17 +248,19 @@ h1,h2,h3,h4,h5,h6{
   display: block;
   top: 0;
   left: 0;
-  width: 48px!important;
+  width: 39px !important;
   height: 25px!important;
   background: white;
   border-radius: 3px;
   outline: 1px solid #acacac;
   transition: all 0.2s ease;
+  margin-right: 12px;
 }
 
 .checkbox:hover .checkmark {
   background: #f4f4f5;
   transition: all 0.2s ease;
+  border:0;
 }
 
 .checkbox input:checked ~.checkmark {
@@ -151,8 +273,8 @@ h1,h2,h3,h4,h5,h6{
   content: "";
   left: 50%;
   top: 40%;
-  width: 4px;
-  height: 8px;
+  width: 10px;
+  height: 20px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -162,6 +284,16 @@ h1,h2,h3,h4,h5,h6{
   opacity: 0;
   transition: all 0.2s ease;
 }
+input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: #fff; /* Specify the desired background color */
+  border-radius: 2px; /* Add border-radius for a rounded checkbox appearance */
+  margin-right: 6px; /* Add some spacing between the checkbox and label */
+}
 
 .checkbox input:checked~.checkmark::after {
   opacity: 1;
@@ -170,4 +302,39 @@ h1,h2,h3,h4,h5,h6{
 label{
   @include myfont(16px,500,mainFont);
   color:#869BAD;
+}
+
+.mybutton,.viewmorebutton{
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p{
+    margin-bottom: 0;
+    transition: 0.2s ease-in-out;
+    @include myfont(16px,700,mainFont);
+  }
+  img{
+    transition:0.2s ease-in-out;
+  }
+  &:hover{
+    img{
+      margin-left: 8px;
+    }
+    p{
+      margin-right: 8px;
+    }
+  }
+}
+
+.underconstructionmain{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  a{
+    color: #006FDD;
+    text-decoration: underline!important;
+  }
 }

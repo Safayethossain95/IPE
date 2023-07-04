@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPE</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -11,91 +12,265 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+  <div class="desktop">
 
-    <div class="header">
+    <div class="header ">
         <h3>Get In Touch Call +880 123 456 789</h3>
     </div>
+  </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="myContainer d-flex">
-          <a class="navbar-brand" href="index.html"><img src="./images/mainlogo.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="studyinUSA.html">Study Abroad</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="newsandevents.html">News & Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactpage.html">Contact</a>
-              </li>
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+      <div class="myContainer d-flex">
+        <a class="navbar-brand" href="index.html"><img src="./images/mainlogo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="./images/menu.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a id="studyabroaddrp" class="nav-link" href="studyinUSA.html">Study Abroad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newsandevents.html">News & Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactpage.html">Contact</a>
+            </li>
+            
+            
+          </ul>
+          <div class="mybutton">
               
-              
-            </ul>
-            <div class="mybutton">
-                
-                    <button>Apply Now <img src="./images/navarr.png" alt=""></button>
-
-            </div>
-           
+                 <a href="applyOnline.html">
+                  <button class="d-flex align-items-center justify-content-center"><p>Apply Now</p> <img src="./images/navarr.png" alt=""></button>
+                 </a>
+  
           </div>
+         
         </div>
-      </nav>
+      </div>
+    </nav>
+      <div class="mobile">
 
-     <div class="banner">
-        <div class="overlay">
-            <div class="myContainer">
-                <div class="row">
-                    <div class="col-lg-7 d-flex align-items-center">
-                        <div class="left">
-                            <h1>Discover a world of knowledge and cultural immersion with IPE</h1>
-                            <p>Unlock Boundless Opportunities with IPE Your Trusted Partner for International Education Adventures and Unforgettable Experiences</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="rightform">
-                            <h5>Get Connected!</h5>
+        <div class="banner bannermobile">
+          
+          <div class="overlay">
+               <div class="myContainer">
+                   <div class="row">
+                       <div class="col-lg-7 d-flex align-items-center">
+                           <div class="left">
+                               <h1>Discover a world of knowledge and cultural immersion with IPE</h1>
+                               <p>Unlock Boundless Opportunities with IPE Your Trusted Partner for International Education Adventures and Unforgettable Experiences</p>
+                           </div>
+                       </div>
+                       <div class="col-lg-5">
+                           <div class="rightform">
+                               <h5>Get Connected!</h5>
+   
+                               <form action="POST">
+                                 <div class="row">
+                                   <div class="col-lg-6">
+                                     <input type="text" placeholder="First Name">
+                                   </div>
+                                   <div class="col-lg-6">
+                                     <input type="text" placeholder="Last Name">
+   
+                                   </div>
+                                   <div class="col-lg-12">
+                                     <input type="text" placeholder="Email">
+   
+                                   </div>
+                                   <div class="col-lg-12">
+                                     <input type="text" placeholder="Phone">
+   
+                                   </div>
+                                   <div class="col-lg-12">
+                                     <input type="text" placeholder="City">
+   
+                                   </div>
+                                 </div>
+                                 <div class="bannerformbutton">
+                                   <button>Submit</button>
+   
+                                 </div>
+                               </form>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div> 
+        </div>
+      </div>
+      <div class="desktop">
+        <div class="banner">
+          <video autoplay loop muted>
+            <source src="./videos/bannervideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+           <div class="overlay">
+               <div class="myContainer">
+                   <div class="row">
+                       <div class="col-lg-7 d-flex align-items-center">
+                           <div class="left">
+                               <h1>Discover a world of knowledge and cultural immersion with IPE</h1>
+                               <p>Unlock Boundless Opportunities with IPE Your Trusted Partner for International Education Adventures and Unforgettable Experiences</p>
+                           </div>
+                       </div>
+                       <div class="col-lg-5">
+                           <div class="rightform">
+                               <h5>Get Connected!</h5>
+   
+                               <form action="POST">
+                                 <div class="row">
+                                   <div class="col-lg-6">
+                                     <input type="text" placeholder="First Name">
+                                   </div>
+                                   <div class="col-lg-6">
+                                     <input type="text" placeholder="Last Name">
+   
+                                   </div>
+                                   <div class="col-lg-12">
+                                     <input type="text" placeholder="Email">
+   
+                                   </div>
+                                   <div class="col-lg-12">
+                                     <input type="text" placeholder="Phone">
+   
+                                   </div>
+                                   <div class="col-lg-12">
+                                     <input type="text" placeholder="City">
+   
+                                   </div>
+                                 </div>
+                                 <div class="bannerformbutton">
+                                   <button>Submit</button>
+   
+                                 </div>
+                               </form>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
 
-                            <form action="POST">
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <input type="text" placeholder="First Name">
-                                </div>
-                                <div class="col-lg-6">
-                                  <input type="text" placeholder="Last Name">
+      </div>
 
-                                </div>
-                                <div class="col-lg-12">
-                                  <input type="text" placeholder="Email">
-
-                                </div>
-                                <div class="col-lg-12">
-                                  <input type="text" placeholder="Phone">
-
-                                </div>
-                                <div class="col-lg-12">
-                                  <input type="text" placeholder="City">
-
-                                </div>
-                              </div>
-                              <div class="bannerformbutton">
-                                <button>Submit</button>
-
-                              </div>
-                            </form>
-                        </div>
-                    </div>
+      <div id="drpdwn" class="drpdwn">
+      
+        <div class="row">
+          <div class="col-lg-4">
+            <a href="studyinUSA.html">
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag1.png" alt="">
                 </div>
+                <div class="text">
+                  <p>Study in USA</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="underConstruction.html">
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag2.png" alt="">
+                </div>
+                <div class="text">
+                  <p>Study in UK</p>
+                </div>
+              </div>
+      
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="underConstruction.html">
+      
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag3.png" alt="">
+                </div>
+                <div class="text">
+                  <p>Study in Australia</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="underConstruction.html">
+      
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag4.png" alt="">
+                </div>
+                <div class="text">
+                  <p>Study in NewZealand</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="underConstruction.html">
+      
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag5.png" alt="">
+                </div>
+                <div class="text">
+                  <p>Study in Canada</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="underConstruction.html">
+      
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag6.png" alt="">
+                </div>
+                <div class="text">
+                  <p>Study in Ireland</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="underConstruction.html">
+      
+              <div class="drpitem">
+                <div class="img">
+                  <img src="./images/drpflag7.png" alt="">
+                </div>
+                <div class="text">
+                  <p>Study in
+                    Germany</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        
+        <div class="col-lg-4">
+          <a href="underConstruction.html">
+      
+            <div class="drpitem">
+              <div class="img">
+                <img src="./images/drpflag8.png" alt="">
+              </div>
+              <div class="text">
+                <p>Study in Japan</p>
+              </div>
             </div>
+          </a>
         </div>
-     </div>
+        </div>
+      </div>
+
+      
 
      <div class="countersection">
       <div class="myContainer d-flex justify-content-between">
@@ -124,7 +299,10 @@
      </div>
 
      <div class="whatsapp d-lg-block d-none">
-       <img src="./images/whatsapp.png" height="80px" width="80px" alt="..." >
+       <a target="_blank" href="https://wa.me/8801711848895">
+         <img  src="./images/whatsapp.png" height="80px" width="80px" alt="..." >
+
+       </a>
      </div>
 
      <div class="wherecanyoustudy">
@@ -134,29 +312,71 @@
         </div>
         <div class="myContainer">
           <div class="row">
-            <div class="col-lg-3">
-              <img src="./images/usa.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/usa.jpg" alt="">
+                <div class="overlay">
+                  <p>USA</p>
+              </div>
+
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/uk.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/uk.jpg" alt="">
+                <div class="overlay">
+                  <p>UK</p>
+              </div>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/usa.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/australia.jpg" alt="">
+                <div class="overlay">
+                  <p>AUSTRALIA</p>
+              </div>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/australia.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/newzealand.jpg" alt="">
+                <div class="overlay">
+                  <p>NEW ZEALAND</p>
+              </div>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/canada.png" alt="">
+          
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/canada.jpg" alt="">
+                <div class="overlay">
+                  <p>CANADA</p>
+              </div>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/ireland.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/ireland.jpg" alt="">
+                <div class="overlay">
+                  <p>IRELAND</p>
+              </div>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/germany.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/germany.jpg" alt="">
+                <div class="overlay">
+                  <p>GERMANY</p>
+              </div>
+              </div>
             </div>
-            <div class="col-lg-3">
-              <img src="./images/japan.png" alt="">
+            <div class="col-lg-3 col-6">
+              <div class="imgbox">
+                <img src="./images/japan.jpg" alt="">
+                <div class="overlay">
+                  <p>JAPAN</p>
+              </div>
+              </div>
             </div>
           </div>
 
@@ -167,7 +387,7 @@
 
       <div class="myContainer">
         <div class="row">
-          <div class="col-lg-7">
+          <div class="col-lg-7 desktop">
 
             <div class="row align-items-center">
               <div class="col-lg-6 text-end">
@@ -181,30 +401,36 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <div class="subheading">
+            <div class="subheading desktop">
               <h3>Our Service</h3>
               <p>Comprehensive list of services offered by IPE</p>
             </div>
+            <div class="subheading mobile text-center">
+              <h3>Our Service</h3>
+              <p>Comprehensive list of services offered by IPE</p>
+            </div>
+            <div class="wrap">
 
-            <div class="spill">
-              <img src="./images/sericon1.png" alt="">
-              <p>University Selection</p>
-            </div>
-            <div class="spill">
-              <img src="./images/sericon2.png" alt="">
-              <p>Application Assistance</p>
-            </div>
-            <div class="spill">
-              <img src="./images/sericon3.png" alt="">
-              <p>Visa Guidance</p>
-            </div>
-            <div class="spill">
-              <img src="./images/sericon4.png" alt="">
-              <p>Accommodation Support</p>
-            </div>
-            <div class="spill">
-              <img src="./images/sericon5.png" alt="">
-              <p>Pre-Departure Orientation</p>
+              <div class="spill">
+                <img src="./images/sericon1.png" alt="">
+                <p>University Selection</p>
+              </div>
+              <div class="spill">
+                <img src="./images/sericon2.png" alt="">
+                <p>Application Assistance</p>
+              </div>
+              <div class="spill">
+                <img src="./images/sericon3.png" alt="">
+                <p>Visa Guidance</p>
+              </div>
+              <div class="spill">
+                <img src="./images/sericon4.png" alt="">
+                <p>Accommodation Support</p>
+              </div>
+              <div class="spill">
+                <img src="./images/sericon5.png" alt="">
+                <p>Pre-Departure Orientation</p>
+              </div>
             </div>
           </div>
         </div>
@@ -216,14 +442,22 @@
       <div class="myContainer">
         <div class="row">
           <div class="col-lg-4">
-            <div class="subheading">
+            <div class="subheading desktop">
               <h3>Top</h3>
               <h3>Universities</h3>
               <p>A Gateway to Limitless Opportunities: Join the Elite League of Top Universities</p>
             </div>
-            <div class="viewmorebutton">
+            <div class="subheading mobile text-center">
+              <h3>Top Universities</h3>
+              
+              <p>A Gateway to Limitless Opportunities: Join the Elite League of Top Universities</p>
+            </div>
+            <div class="viewmorebutton desktop">
               <button>
-                View More
+                <p>
+
+                  View More
+                </p>
                 <img src="./images/topuniviewmorebutton.png" alt="">
               </button>
             </div>
@@ -258,52 +492,53 @@
           <h3>Our Partners</h3>
           <p>Our Trusted Partnerships Enhance Your Study Abroad Journey</p>
         </div>
+      
 
         <div class="aprtnerboxes">
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner1.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner2.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner3.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner4.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner5.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner6.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner7.png" alt="">
               </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-4">
               <div class="partnersinglebox">
                 <img src="./images/partner8.png" alt="">
               </div>
@@ -323,10 +558,10 @@
 
       <div class="myContainer">
         <div class="row mx-0">
-          <div class="col-lg-6 firstrowpd">
+          <div class="col-lg-6 col-12 firstrowpd">
             <img class="firstimg" style="margin-bottom:'0px'" src="./images/stories1.png" alt="">
           </div>
-          <div class="col-lg-6 firstrowpd">
+          <div class="col-lg-6 col-12 firstrowpd">
             <div class="myrow">
               <div class="column one">
                 <img src="./images/stories2.png" alt="">
@@ -352,7 +587,7 @@
       <h3>Get In Touch Call +880 123 456 789</h3>
      </div>
 
-     <div class="footer">
+     <div class="footer desktop">
         <div class="myContainer">
           <div class="row">
             <div class="col-lg-4">
@@ -379,6 +614,54 @@
               </div>
               <div class="ftlist">
                 <ul>
+                  <li><a href="tel:+880 1738 184 833">+880 1738 184 833</a></li>
+                  <li><a href="mailto:international_placement@yahoo.com">international_placement@yahoo.com</a></li>
+                  <li><a href="">House: 413 (Level 02), Road: 16,  Block: A, <br/>(opposite of Evercare Hospital) Bashundhara R/A, Dhaka</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="ftsmheading">
+                <p>Subscribe Now!</p>
+              </div>
+              <div class="emailinput">
+                <input type="text" placeholder="Email Address">
+                <button>Sign Up</button>
+                <p>Sing up with your email address to receive updates about new admission information.</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="myContainer">
+              <div class="row ">
+                <div class="col-lg-4 text-center">
+                  <h6>Privacy Policy</h6>
+                </div>
+                <div class="col-lg-4 text-center">
+                  
+                  <h6>Terms & Conditions</h6>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <h6>Copyright &copy; 2023 IPE</h6>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+
+     <div class="footer mobile">
+        <div class="myContainer">
+          <div class="row">
+           
+            <div class="col-lg-4">
+              <div class="ftsmheading">
+                <p>Contact</p>
+              </div>
+              <div class="ftlist">
+                <ul>
                   <li><a href="tel:+088 123 456 789">+088 123 456 789</a></li>
                   <li><a href="mailto:mailto:contact@ipeeducation.com">mailto:contact@ipeeducation.com</a></li>
                   <li><a href="">123, Abc Street, Dhaka, Bangladesh</a></li>
@@ -396,6 +679,24 @@
               </div>
               
             </div>
+            <div class="col-lg-4">
+                
+
+              <div class="socialicons">
+                <div class="ftsmbox">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="ftsmbox">
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="ftsmbox">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="ftsmbox">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+          </div>
           </div>
           <div class="copyright">
             <div class="myContainer">

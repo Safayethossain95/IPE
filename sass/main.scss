@@ -19,9 +19,17 @@
     h3{
         @include myfont(20px,700,mainFont);
         color:#F0F4FF;
+        @include media(xsmDevice){
+            @include myfont(16px,700,mainFont);
+        }
     }
 }
 .navbar{
+    .navbar-nav{
+        @include media(xsmDevice){
+            text-align: center;
+        }
+    }
     .navbar-brand{
         margin-right: 38px;
     }
@@ -31,6 +39,9 @@
             @include myfont(16px,500,mainFont);
             color:#000;
             text-transform: uppercase;
+            @include media(xsmDevice){
+                margin:14px 0;
+            }
         }
     }
     .navbar-collapse{
@@ -40,7 +51,9 @@
             justify-content: center;
             align-items: center;
             button{
-    
+                @include media(xsmDevice){
+                    margin-bottom: 30px;
+                }
                 border-radius: 79px;
                 background: #001E7C;
                 
@@ -49,35 +62,57 @@
                 align-items: center;
                 gap: 10px;
                 border:0;
+                
                 @include myfont(16px,700,mainFont);
                 color:#F0F4FF;
                 img{
                     margin-left: 10px;
-                    margin-top: -3px;
+                    
                 }
             }
         }
     }
 }
 .banner{
-    background: url(../images/bannermainimg.png) ;
-    background-position: center;
-    background-size: cover;
+    // background: url(../images/bannermainimg.png) ;
+    // background-position: center;
+    // background-size: cover;
     height: 580px;
     width: 100%;
     position:relative;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Adjust the video sizing to cover the entire div */
+      }
+    &.bannermobile{
+        height: 700px!important;
+        
+    }
     .overlay{
         position:absolute;
         width: 100%;
         height: 100%;
-        background:rgba(211, 211, 211, 0.8);
+        // background:rgba(255, 255, 255, 0.5);
+        // background:rgba(0, 111, 221, 0.8);
+        background:rgba(240, 244, 255, 0.8);
         display: flex;
         align-items: center;
+        @include media(xsmDevice){
+            display: unset;
+            padding-top: 73px;
+        }
         .left{
             
             h1{
                 @include myfont(50px,900,mainFontBlack);
                 color: #001E7C;
+                @include media(xsmDevice){
+                    @include myfont(30px,900,mainFontBlack);
+                }
             }
             p{
 
@@ -87,6 +122,17 @@
         .rightform{
             padding:37px 20px;
             background-color: #fff;
+            @include media(xsmDevice){
+                padding: 37px 20px;
+                background-color: #fff;
+                position: absolute;
+                top: calc(100% - 405px);
+                left: 50%;
+                transform: translateX(-50%);
+                width: 86%;
+                border: 1px solid #F0F4FF;
+
+            }
             .bannerformbutton{
                 
                 button{
@@ -106,6 +152,10 @@
                     color:#F0F4FF;
                     border:0;
                     margin-top: 77px;
+                    @include media(xsmDevice)
+                    {
+                        margin-top: 40px;
+                    }
                 }
             }
             h5{
@@ -134,6 +184,9 @@
 
 .countersection{
     padding-top: 100px;
+    @include media(xsmDevice){
+        padding-top: 150px;
+    }
     .smbox{
         width: 150px;
         height: 150px;
@@ -150,21 +203,78 @@
             @include myfont(16px,400,mainFont);
             color:#001223;
         }
+        @include media(xsmDevice){
+            margin-bottom: 30px;
+        }
     }
 }
 
 .wherecanyoustudy{
     padding-top: 100px;
+    @include media(xsmDevice){
+        padding-top: 50px;
+    }
     
     img{
-        margin-bottom: calc(var(--bs-gutter-x));
+        
         width:100%;
     }
+
+    .imgbox{
+        margin-bottom: calc(var(--bs-gutter-x));
+        background-color: red;
+        position:relative;
+        overflow: hidden;
+        img{
+            transition:0.2s ease-in-out;
+        }
+        &:hover{
+            img{
+                overflow: hidden;
+                transform:scale(1.05);
+               
+            }
+            
+        }
+        .overlay{
+            
+            position: absolute;
+            background-color: #006FDD;
+            color: #fff;
+            bottom: 0px;
+            right: 0px;
+            height: 30px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            z-index: 888;
+
+            p{
+                margin-bottom: 0;
+                @include myfont(16px,400,mainFontBlack);
+            }
+        }
+    }
 }
+
 .ourservice{
     padding-top: 140px;
+    @include media(xsmDevice){
+        padding-top: 50px;
+    }
     img{
         margin-bottom: calc(var(--bs-gutter-x));
+    }
+    .wrap{
+        @include media(xsmDevice){
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            
+        }
     }
     .spill{
         display: flex;
@@ -177,21 +287,34 @@
             @include myfont(20px,500,mainFont);
             margin-bottom: 0;
         }
+        @include media(xsmDevice){
+            width: 50%;
+            margin-bottom: 20px;
+            p{
+                margin-left: 15px;
+                @include myfont(14px,500,mainFont);
+                margin-bottom: 0;
+            }
+        }
     }
 }
 .topuniversities{
     padding-top: 150px;
+    @include media(xsmDevice){
+        padding-top: 50px;
+    }
     .viewmorebutton{
+        width: 174px;
         button{
             background-color: #006FDD;
-            width: 174px;
+            width: 100%;
             height: 50px;
             border-radius: 43px;
             @include myfont(16px,700,mainFont);
             color:#F0F4FF;
             border:0;
             img{
-                margin-top: -3px;
+                
                 margin-left: 10px;
             }
         }
@@ -200,6 +323,9 @@
 
 .ourpartners{
     padding-top: 150px;
+    @include media(xsmDevice){
+        padding-top: 50px;
+    }
     .partnersinglebox{
         height: 100px;
         width: 100%;
@@ -210,16 +336,28 @@
         justify-content: center;
         margin-bottom: calc(var(--bs-gutter-x));
         transition:0.4s;
+        box-shadow: 0px 3px 10px 0px rgba(0, 30, 124, 0.10);
+        img{
+            height: 100%;
+            @include media(xsmDevice){
+                width: 100%;
+            }
+        }
         &:hover{
-            box-shadow: 0px 3px 10px 0px rgba(0, 30, 124, 0.10);
         }
     }
 }
 .stories{
     padding-top: 150px;
+    @include media(xsmDevice){
+        padding-top: 50px;
+    }
     .subheading{
         p{
             margin-bottom: 85px;
+            @include media(xsmDevice){
+                margin-bottom: 25px!important;
+            }
         }
     }
     .firstrowpd{
@@ -227,6 +365,11 @@
             padding-right: 0;
             padding-left: 0;
 
+        }
+        @include media(xsmDevice){
+            img{
+                width: 100%;
+            }
         }
        
         .firstimg{
@@ -277,18 +420,28 @@
 }
 .header2{
     margin-top: 130px;
+    @include media(xsmDevice){
+        margin-top: 50px!important;
+    }
 }
 
 .footer{
     padding-top: 50px;
     background-color: #F0F4FF;
-    
+    @include media(xsmDevice){
+        padding-top: 0!important;
+        // height: 665px;
+    }
     .footerlogoimg{
         margin-bottom: 10px;
     }
     .socialicons{
         display: flex;
         margin-bottom: 84px;
+        @include media(xsmDevice){
+            justify-content: center;
+            margin : 50px 0 37px 0;
+        }
         .ftsmbox{
             margin-right: 15px;
             width: 40px;
@@ -326,16 +479,23 @@
             color:#fff;
             right:0;
             top:0;
+            border:0;
+            text-transform: uppercase;
+            @include myfont(14px,700,mainFont);
+            
         }
         input{
             border:0;
             width: 100%;
             height: 50px;
             background-color: #fff;
+            padding-left: 13px;
+            @include myfont(14px,400,mainFont);
+
             &::placeholder{
                 @include myfont(14px,400,mainFont);
                 color:#869BAD;
-                padding-left: 13px;
+                
             }
         }
         p{
@@ -347,28 +507,44 @@
     .copyright{
         height: 66px;
         border-top: 1px solid rgba(134, 155, 173, 0.5);
-
+        @include media(xsmDevice){
+            height: 130px;
+            padding-top: 15px;
+        }
         h6{
             @include myfont(12px,400,mainFont);
             color:#869BAD;
             line-height: 66px;
+            @include media(xsmDevice){
+                height: 28px;
+            }
         }
     }
 }
 .aboutusmain{
     padding-top: 100px;
-    
+    @include media(xsmDevice){
+        padding-top: 50px;
+    }
     .ourmission{
         height: 248px;
         width: 100%;
         background-color: #F0F4FF;
         padding: 48px 61px;
         margin-top: 60px;
+        @include media(xsmDevice){
+            height: unset;
+            padding-bottom: 0;
+        }
 
     }
 }
 .ourserviceaboutpage{
         margin-top: 100px!important;
+
+        @include media(xsmDevice){
+            margin-top: 65px!important;
+        }
     }
     .lleft{
         img{
@@ -393,9 +569,15 @@
 
 .whychooseipe{
     padding-top: 100px;
+    @include media(xsmDevice){
+        padding-top: 20px!important;
+    }
     .subheading{
         h3{
             padding-bottom: 100px;
+            @include media(xsmDevice){
+                padding-bottom: 50px;
+            }
         }
     }
     .wcubox{
@@ -405,6 +587,9 @@
         padding: 49px 25px 21px 26px;
         position:relative;
         margin-bottom: 60px;
+        @include media(xsmDevice){
+            height: 244px;
+        }
         &.wsubox{
             height: 230px;
         }
@@ -428,6 +613,9 @@
             @include myfont(16px,500,mainFont);
             color:#001223;
             padding-top: 6px;
+            @include media(xsmDevice){
+                @include myfont(12px,500,mainFont);
+            }
         }
     }
 }
@@ -436,6 +624,9 @@
 }
 .studyinusamain{
     padding-top: 80px;
+    @include media(xsmDevice){
+        padding-top: 0!important;
+    }
 }
 
 .whystdus{
@@ -447,6 +638,9 @@
         p{
             width: 749px;
             margin:0 auto;
+            @include media(xsmDevice){
+                width: unset;
+            }
         }
     }
 }
@@ -467,6 +661,9 @@
         border-radius: 5px;
         border: 1px solid #E8E8E8;
         padding:13px;
+        @include media(xsmDevice){
+            margin-bottom: 30px;
+        }
         .wrap{
             text-align: center;
         }
@@ -487,6 +684,9 @@
   .evrthngabtstdusa{
     .subheading{
         padding-top: 100px;
+        @include media(xsmDevice){
+            padding-top: 50px!important;
+        }
     }
 
     .accordion{
@@ -529,9 +729,17 @@
     background: #F0F4FF;
     margin-top: 100px;
     margin-bottom: 110px;
+    @include media(xsmDevice){
+        padding: 53px 20px;
+    }
     .subheading{
         p{
             margin-top: 25px;
+        }
+        h3{
+            @include media(xsmDevice){
+                line-height: 25px!important;
+            }
         }
     }
     .mybutton2{
@@ -557,6 +765,9 @@
 
   .newsandeventsmain{
     padding-top: 100px;
+    @include media(xsmDevice){
+        padding-top: 50px!important;
+    }
   }
 
   .necards{
@@ -605,6 +816,9 @@
 
   .newspagebottomheader{
     margin-top: 100px;
+    @include media(xsmDevice){
+        margin-top: 50px!important;
+    }
   }
 
   .nedbanner{
@@ -613,6 +827,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 350px;
+    &.mobile{
+        background: url(../images/nedetailbannermb.png);
+        width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    }
   }
   .nedmain{
     padding-top: 50px;
@@ -620,6 +841,9 @@
         h3{
             @include myfont(40px,700,mainFont);
             color:#001223;
+            @include media(xsmDevice){
+                @include myfont(20px,700,mainFont);
+                line-height: 30px;            }
         }
     }
     .neform{
@@ -698,11 +922,17 @@
 
   .stdabrdipe{
     padding-top: 100px;
+    @include media(xsmDevice){
+        padding-top: 50px!important;
+    }
   }
 
   .contactpage{
     .map{
         margin-top: 55px;
+        @include media(xsmDevice){
+            margin-bottom: 40px;
+        }
     }
     .cbar{
         display: flex;
@@ -777,6 +1007,45 @@ form{
                 margin-left: 10px;
                 margin-top: -3px;
             }
+        }
+    }
+  }
+
+  .drpdwn{
+    position: fixed;
+    width: 950px;
+    height: 290px;
+    background-color: #006FDD;
+    left:50%;
+    
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s ease-in-out;
+    padding: 55px;
+    z-index: 999;
+    .drpitem{
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        .text{
+            p{
+                @include myfont(16px,700,mainFont);
+                color:#fff;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                margin-left: 15px;
+            }
+        }
+    }
+  }
+
+
+  .studyinusamain{
+    .subheading{
+        p{
+            margin-top: 15px;
+            margin-bottom: 0;
         }
     }
   }

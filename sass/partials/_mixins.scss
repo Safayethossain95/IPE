@@ -6,12 +6,12 @@
 
 @mixin media($size) {
     @if $size == xsmDevice {
-      @media (min-width: 320px) and (max-width: 575px) { @content; }
-    } @else if $size == smDevice{
-      @media (min-width: 576px) and (max-width: 767px) { @content; }
-    }
-     @else if $size == mdDevice {
-      @media (min-width: 768px) and (max-width:991px) { @content; }
+      @media (min-width: 320px) and (max-width:991px) { @content; }
+    // } @else if $size == smDevice{
+    //   @media (min-width: 576px) and (max-width: 767px) { @content; }
+    // }
+    //  @else if $size == mdDevice {
+    //   @media (min-width: 768px) and (max-width:991px) { @content; }
     } @else if $size == lgDevice {
       @media (min-width: 992px) and (max-width:1199px) { @content; }
     } @else if $size == xlgDevice  {
